@@ -1,53 +1,46 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check-Triangle</title>
+    <link rel="stylesheet" href="triangle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <title>Check Triangle</title>
 </head>
+
 <body>
-    <div id="Container">
+    <div id="container">
+        <div id="header">
+            <h1>Check Triangle</h1>
+            <p>Please enter length of sides.</p>
+        </div>
 
-<div id="Header"><h1></h1></div>
-
-        <div id="Content_1">
-                <div id="Explanation">
-                This calculator will determine what
-                triangle you have made depending on
-                the integer values in the input fields.
-
-                </div>
-                <div id="Form">
-                    <FORM NAME="Triangle_Inputs" METHOD="GET">
-                    Enter the triangle values below: <br>
-                    <p>
-                    <h4>Side 1: </h4><BR>
-                    <INPUT TYPE="Integer" NAME="input1" VALUE=""><P>
-                    <h4>Side 2: </h4><BR>
-                    <INPUT TYPE="Integer" NAME="input2" VALUE=""><P>
-                    <h4>Side 3:</h4> <BR>
-                    <INPUT TYPE="Integer" NAME="input3"  VALUE=""><P>
-                    <INPUT TYPE="button" NAME="Submit" Value="Submit" Class="Submit" onClick="checkinputs()">
-                    </FORM>
-                </div>
-                <div id="Verbal_Output">
-                    <h2>You made a:</h2>
-                    <p>        
-                    <h2>Triangle</h2>
-                </div>
-
+        <div id="main">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Side-1</span>
+                <input id="input1" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             </div>
-            <p>
-            <p>
-        <div id="Content_2">
 
-        <div id="Image_Output">asdad</div>
-    </div>      
-</div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Side-2</span>
+                <input id="input2" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
 
-    <script src="app.js"></script>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Side-3</span>
+                <input id="input3" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <button class="btn btn-outline-dark" type="button" id="button-addon2">Check</button>
+        </div>
+        <div id="footer">
+            <p id="result"></p>
+        </div>
+    </div>
 
-    
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
+
 </html>

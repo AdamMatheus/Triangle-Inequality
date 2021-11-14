@@ -1,0 +1,25 @@
+body {
+	background: url("1.jpg");
+}
+
+#container {
+	margin: 5rem auto;
+	width: 20%;
+	text-align: center;
+	background-color: grey;
+	padding: 3rem;
+	border-radius: 10px;
+}
+
+span {
+	width: 5rem;
+}
+
+#result {
+	margin: 0.5rem;
+	background-color: whitesmoke;
+	border-radius: 7px;
+	height: auto;
+	width: auto;
+	align-items: center;
+}

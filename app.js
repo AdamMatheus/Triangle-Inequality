@@ -1,32 +1,34 @@
-function checkinputs() {
-	//  var = parseInt(document.Name_Of_Element_Form.Field_Name(Input).value);
-	/* Input Fields */
+const s1 = document.querySelector('#input1');
+const s2 = document.querySelector('#input2');
+const s3 = document.querySelector('#input3');
+const button = document.querySelector('#button-addon2');
+const result = document.querySelector('#result');
 
-	inp1 = parseInt(document.Triangle_Inputs.input1.value);
-	inp2 = parseInt(document.Triangle_Inputs.input2.value);
-	inp3 = parseInt(document.Triangle_Inputs.input3.value);
-	/* Side options */
-	a = inp1 + inp2;
-	b = inp1 + inp3;
-	c = inp2 + inp3;
-	sides = [ a, b, c ];
-	const calc = sides.reduce(
-		(a, b, c) =>
-			a + b >= c && b + c >= a && a + c >= b ? `${'You can draw'}` : `${'You can not draw this triangle'}`
-	);
-	console.log(calc);
+button.addEventListener('click', triangle);
+function triangle() {
+	Side1 = +s1.value;
+	Side2 = +s2.value;
+	Side3 = +s3.value;
 
-	if (a == b && b == c) {
-		alert('Equalateral');
-	}
-	if (a == b && a != c) {
-		alert('Isosceles');
-	}
-	if (a != b && a == c) {
-		alert('Isosceles');
-	}
-
-	if (a != b && a != c && b != c) {
-		alert('Scalene!');
+	if (Side1 > 0 && Side2 > 0 && Side3 > 0) {
+		if (Side1 + Side2 > Side3 && Side1 + Side3 > Side2 && Side2 + Side3 > Side1) {
+			if (Side1 == Side2 && Side2 == Side3) {
+				result.innerHTML = 'This is Equilateral Triangle';
+			} else if (Side1 == Side2 || Side2 == Side3 || Side1 == Side3) {
+				result.innerHTML = 'This is Isosceles Triangle';
+			} else {
+				result.innerHTML = 'This is Scalene Triangle';
+			}
+		} else {
+			result.innerHTML = 'It`s not possible to draw this triangle with given values';
+		}
+	} else {
+		result.innerHTML = 'Please, enter positive numbers';
 	}
 }
+window.addEventListener('keyup', function(event) {
+	if (event.code == 'Enter' || event.code == 'NumpadEnter') {
+		event.preventDefault;
+		triangle(event.code);
+	}
+});
